@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">GiuridiMath</string>
+
+    <!-- NAV BAR -->
+    <string name="nav_header_title">GiuridiMath</string>
+    <string name="nav_header_subtitle">designed by carmelolg</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!-- NAV BAR MENU -->
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_calculator_title">Day calculator</string>
+    <string name="menu_settings_title">Settings</string>
+
+    <!-- MENU EXTRA -->
+    <string name="action_settings">Settings</string>
+
+    <!-- SETTINGS -->
+    <string name="settings_panel_title">Settings</string>
+    <string name="settings_day_hours_desc">Daily hours and minutes</string>
+    <string name="dialog_reset_title">Are you sure?</string>
+    <string name="dialog_reset_description">If you proceed, all your preferences will be reset.</string>
+    <string name="section_disclaimer_label">Miscellaneous</string>
+    <string name="section_disclaimer_license_option">License</string>
+    <string name="section_disclaimer_privacy_option">Privacy</string>
+    <string name="section_disclaimer_reset_option">Reset all preferences</string>
+    <string name="settings_save_label">Save</string>
+    <string name="privacy_url" translatable="false">https://carmelolg.github.io/save-your-time/license</string>
+    <string name="license_url" translatable="false">https://raw.githubusercontent.com/carmelolg/save-your-time/master/LICENSE</string>
+
+</resources>

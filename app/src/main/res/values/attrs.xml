@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="GMPanelBackgroundColor" format="reference" />
+    <attr name="GMPanelTextColor" format="reference" />
+    <attr name="GMChartBarColor" format="reference" />
+    <attr name="GMChartSecondBarColor" format="reference" />
+    <attr name="GMColorPrimary" format="reference" />
+    <attr name="GMColorOnPrimary" format="reference" />
+    <attr name="GMColorSecondary" format="reference" />
+    <attr name="GMColorOnSecondary" format="reference" />
+    <attr name="GMColorTertiary" format="reference" />
+    <attr name="GMFloatingButtonBackground" format="reference" />
+    <attr name="GMFloatingButtonForeground" format="reference" />
+    <attr name="GMHistoryStatsPanelBackgroundColor" format="reference" />
+    <attr name="GMHistoryStatsPanelTextColor" format="reference" />
+    <attr name="GMDividerColor" format="reference" />
+    <attr name="GMHighlightColor" format="reference" />
+    <attr name="GMBackgroundColor" format="reference" />
+    <attr name="GMProgressBarColor" format="reference" />
+
+</resources>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/container_preferences"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/section_preferences_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:background="?attr/GMPanelBackgroundColor"
+                        android:padding="10dp"
+                        android:text="@string/settings_panel_title"
+                        android:textColor="?attr/GMPanelTextColor"
+                        android:textSize="@dimen/text_size_default" />
+
+
+                    <LinearLayout
+                        android:id="@+id/daily_hours_picker"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.58"
+                            android:gravity="start|center"
+                            android:text="@string/settings_day_hours_desc"
+                            android:textColor="?attr/GMColorPrimary"
+                            android:textSize="@dimen/text_size_default" />
+
+                        <NumberPicker
+                            android:id="@+id/settings_time_picker_hours"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.02"
+                            android:gravity="start|center"
+                            android:text=":"
+                            android:textColor="?attr/GMColorPrimary"
+                            android:textSize="@dimen/text_size_default" />
+
+                        <NumberPicker
+                            android:id="@+id/settings_time_picker_minutes"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.2" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/section_disclaimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:background="?attr/GMPanelBackgroundColor"
+                        android:padding="10dp"
+                        android:text="@string/section_disclaimer_label"
+                        android:textColor="?attr/GMPanelTextColor"
+                        android:textSize="@dimen/text_size_default" />
+
+                    <LinearLayout
+                        android:id="@+id/license_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/section_disclaimer_license_option"
+                            android:textColor="?attr/GMColorPrimary"
+                            android:textSize="@dimen/text_size_default" />
+
+                        <ImageButton
+                            android:id="@+id/license_button"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="?attr/GMBackgroundColor"
+                            android:clickable="true"
+                            android:contentDescription="@string/section_disclaimer_license_option"
+                            android:scaleType="centerInside"
+                            android:scaleX="1.25"
+                            android:scaleY="1.25"
+                            android:src="@drawable/ic_link"
+                            app:tint="?attr/GMColorPrimary" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/privacy_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/section_disclaimer_privacy_option"
+                            android:textColor="?attr/GMColorPrimary"
+                            android:textSize="@dimen/text_size_default" />
+
+                        <ImageButton
+                            android:id="@+id/privacy_button"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="?attr/GMBackgroundColor"
+                            android:clickable="true"
+                            android:contentDescription="@string/section_disclaimer_privacy_option"
+                            android:scaleX="1.25"
+                            android:scaleY="1.25"
+                            android:src="@drawable/ic_link"
+                            app:tint="?attr/GMColorPrimary" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/reset_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/section_disclaimer_reset_option"
+                            android:textColor="?attr/GMColorPrimary"
+                            android:textSize="@dimen/text_size_default" />
+
+                        <ImageButton
+                            android:id="@+id/reset_button"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="?attr/GMBackgroundColor"
+                            android:clickable="true"
+                            android:contentDescription="@string/section_disclaimer_privacy_option"
+                            android:scaleX="1.25"
+                            android:scaleY="1.25"
+                            android:src="@drawable/ic_remove"
+                            app:tint="?attr/GMColorPrimary" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/settings_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/GMBackgroundColor"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/settings_save_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/settings_save_label" />
+    </LinearLayout>
+
+
+</RelativeLayout>

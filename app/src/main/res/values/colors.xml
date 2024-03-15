@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default color -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="n_black_default">#121316</color>
+
+    <!-- day theme -->
+    <color name="first">#19323C</color>
+    <color name="second">#324A5F</color>
+    <color name="third">#FFD275</color>
+    <color name="fourth">#F2545B</color>
+    <color name="fifth">#A93F55</color>
+
+
+    <!-- night theme -->
+    <color name="n_first">#283D3B</color>
+    <color name="n_second">#197278</color>
+    <color name="n_third">#EDDDD4</color>
+    <color name="n_fourth">#F2545B</color>
+    <color name="n_fifth">#A93F55</color>
+
+</resources>
