@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
@@ -40,8 +41,8 @@ class SettingsFragment : Fragment() {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val hours = preferencesService.findDayHoursCustomValue()
-        val minutes = preferencesService.findDayMinutesCustomValue()
+        var hours = preferencesService.findDayHoursCustomValue()
+        var minutes = preferencesService.findDayMinutesCustomValue()
 
         binding.settingsTimePickerHours.minValue = 0
         binding.settingsTimePickerHours.maxValue = 24
@@ -71,9 +72,29 @@ class SettingsFragment : Fragment() {
 
 
         binding.settingsSaveButton.setOnClickListener {
-            preferencesService.updateDayHoursCustomValue(binding.settingsTimePickerHours.value)
-            preferencesService.updateDayMinutesCustomValue(binding.settingsTimePickerMinutes.value)
+            val builder = AlertDialog.Builder(context)
+            builder.setTitle(resources.getText(R.string.dialog_save_title))
+            builder.setMessage(resources.getText(R.string.dialog_save_description))
 
+            builder.setPositiveButton(android.R.string.ok) { _, _ ->
+                lifecycleScope.launch {
+                    preferencesService.updateDayHoursCustomValue(binding.settingsTimePickerHours.value)
+                    preferencesService.updateDayMinutesCustomValue(binding.settingsTimePickerMinutes.value)
+
+                    hours = binding.settingsTimePickerHours.value
+                    minutes = binding.settingsTimePickerMinutes.value
+
+                    Toast.makeText(requireContext(), resources.getText(R.string.dialog_save_toast_result), Toast.LENGTH_LONG).show()
+
+                    binding.settingsBottomLayout.visibility = View.GONE
+
+                }
+            }
+
+            builder.setNegativeButton(android.R.string.cancel) { _, _ ->
+            }
+
+            builder.show()
         }
 
         binding.resetButton.setOnClickListener {

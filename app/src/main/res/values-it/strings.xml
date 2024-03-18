@@ -22,9 +22,25 @@
     <string name="settings_save_label">Salva</string>
     <string name="dialog_reset_title">Sei sicuro?</string>
     <string name="dialog_reset_description">Se approverai, tutte le tue preferenze saranno eliminate.</string>
+    <string name="dialog_save_title">Vuoi salvare?</string>
+    <string name="dialog_save_description">Le tue preferenze verranno aggiornate.</string>
+    <string name="dialog_save_toast_result">Impostazioni aggiornate</string>
     <string name="section_disclaimer_label">Varie</string>
     <string name="section_disclaimer_license_option">Licenza d\'uso</string>
     <string name="section_disclaimer_privacy_option">Privacy</string>
     <string name="section_disclaimer_reset_option">Ripristina preferenze</string>
+
+    <!-- HOME -->
+    <string name="home_panel_title">Calcolatrice</string>
+    <string name="home_current_day_work_label">Durata del giorno lavorativo</string>
+    <string name="home_insert_number_label">Ore residue</string>
+    <string name="home_result">Risultato</string>
+    <string name="home_result_error">Inserisci un numero corretto.</string>
+    <string name="home_result_loading">Ore non inserite.</string>
+    <string name="home_result_days_label">giorni</string>
+    <string name="home_result_hours_label">ore</string>
+    <string name="home_result_minutes_label">minuti</string>
+    <string name="home_clean_label">Reset</string>
+
 
 </resources>

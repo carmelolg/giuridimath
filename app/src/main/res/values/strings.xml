@@ -21,6 +21,9 @@
     <string name="settings_day_hours_desc">Daily hours and minutes</string>
     <string name="dialog_reset_title">Are you sure?</string>
     <string name="dialog_reset_description">If you proceed, all your preferences will be reset.</string>
+    <string name="dialog_save_title">Do you want to save?</string>
+    <string name="dialog_save_description">Your preferences will be updated.</string>
+    <string name="dialog_save_toast_result">Settings updated.</string>
     <string name="section_disclaimer_label">Miscellaneous</string>
     <string name="section_disclaimer_license_option">License</string>
     <string name="section_disclaimer_privacy_option">Privacy</string>
@@ -29,4 +32,15 @@
     <string name="privacy_url" translatable="false">https://carmelolg.github.io/save-your-time/license</string>
     <string name="license_url" translatable="false">https://raw.githubusercontent.com/carmelolg/save-your-time/master/LICENSE</string>
 
+    <!-- HOME -->
+    <string name="home_panel_title">Calculator</string>
+    <string name="home_current_day_work_label">Current day work duration</string>
+    <string name="home_insert_number_label">Insert hours</string>
+    <string name="home_result">Result</string>
+    <string name="home_result_error">Insert a correct number</string>
+    <string name="home_result_loading">Insert hours please.</string>
+    <string name="home_result_days_label">days</string>
+    <string name="home_result_hours_label">hours</string>
+    <string name="home_result_minutes_label">minutes</string>
+    <string name="home_clean_label">Clean</string>
 </resources>
