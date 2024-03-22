@@ -1,16 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.GiuridiMath" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/n_first</item>
-        <item name="colorPrimaryVariant">@color/n_third</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">?attr/GMColorTertiary</item>
+        <item name="colorPrimaryVariant">?attr/GMColorTertiary</item>
+        <item name="colorOnPrimary">?attr/GMBackgroundColor</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/n_second</item>
-        <item name="colorSecondaryVariant">@color/n_fourth</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondary">?attr/GMColorTertiary</item>
+        <item name="colorSecondaryVariant">?attr/GMColorTertiary</item>
+        <item name="colorOnSecondary">?attr/GMBackgroundColor</item>
+
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">?attr/GMBackgroundColor</item>
         <!-- Customize your theme here. -->
 
         <item name="GMPanelBackgroundColor">@color/n_first</item>
@@ -30,5 +32,14 @@
         <item name="GMHighlightColor">@color/n_fifth</item>
         <item name="GMBackgroundColor">@color/n_black_default</item>
         <item name="GMProgressBarColor">?attr/GMColorTertiary</item>
+        <item name="GMNavigationPrimaryColor">@color/black</item>
+        <item name="GMNavigationSecondaryColor">@color/n_black_default</item>
     </style>
+
+    <style name="Theme.GiuridiMath.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorPrimary">?attr/GMBackgroundColor</item>
+        <item name="background">?attr/GMBackgroundColor</item>
+        <item name="titleTextColor">?attr/GMPanelTextColor</item>
+    </style>
+
 </resources>

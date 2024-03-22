@@ -18,5 +18,7 @@
     <attr name="GMHighlightColor" format="reference" />
     <attr name="GMBackgroundColor" format="reference" />
     <attr name="GMProgressBarColor" format="reference" />
+    <attr name="GMNavigationPrimaryColor" format="reference" />
+    <attr name="GMNavigationSecondaryColor" format="reference" />
 
 </resources>
