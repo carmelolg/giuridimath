@@ -147,8 +147,9 @@ class DailyCalculatorFragment : Fragment() {
         exitMinutes = (exitMinutes - permitMinutes).mod(60)
 
 
+        val minusHours = if(exitMinutes < ingressMinute) 1 else 0
         val totalMinutes =
-            (((exitHours - ingressHour) * 60) + (exitMinutes - ingressMinute).mod(60)) - (breakHours * 60 + breakMinutes)
+            (((exitHours - ingressHour - minusHours) * 60) + (exitMinutes - ingressMinute).mod(60)) - (breakHours * 60 + breakMinutes)
 
 
         if (binding.launchTicketCheckbox.isChecked && totalMinutes < (minimumHours * 60 + minimumMinutes)) {
