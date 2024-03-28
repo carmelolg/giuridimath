@@ -199,67 +199,6 @@
                         android:textSize="@dimen/text_size_default" />
 
                     <LinearLayout
-                        android:id="@+id/license_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        android:padding="20dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/section_disclaimer_license_option"
-                            android:textColor="?attr/GMColorPrimary"
-                            android:textSize="@dimen/text_size_default" />
-
-                        <ImageButton
-                            android:id="@+id/license_button"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:background="?attr/GMBackgroundColor"
-                            android:clickable="true"
-                            android:contentDescription="@string/section_disclaimer_license_option"
-                            android:scaleType="centerInside"
-                            android:scaleX="1.25"
-                            android:scaleY="1.25"
-                            android:src="@drawable/ic_link"
-                            app:tint="?attr/GMColorPrimary" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/privacy_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        android:padding="20dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/section_disclaimer_privacy_option"
-                            android:textColor="?attr/GMColorPrimary"
-                            android:textSize="@dimen/text_size_default" />
-
-                        <ImageButton
-                            android:id="@+id/privacy_button"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:background="?attr/GMBackgroundColor"
-                            android:clickable="true"
-                            android:contentDescription="@string/section_disclaimer_privacy_option"
-                            android:scaleX="1.25"
-                            android:scaleY="1.25"
-                            android:src="@drawable/ic_link"
-                            app:tint="?attr/GMColorPrimary" />
-                    </LinearLayout>
-
-                    <LinearLayout
                         android:id="@+id/reset_layout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

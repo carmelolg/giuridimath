@@ -16,7 +16,7 @@ android {
         applicationId = "it.carmelolagamba.giuridimath"
         minSdk = 29
         targetSdk = 34
-        versionCode = 6
+        versionCode = 7
         versionName = "0.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

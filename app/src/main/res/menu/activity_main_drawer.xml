@@ -10,7 +10,7 @@
             android:title="@string/menu_dailycalculator_title" />
         <item
             android:id="@+id/nav_dayoff"
-            android:icon="@drawable/ic_calculator"
+            android:icon="@drawable/ic_calendar"
             android:title="@string/menu_calculator_title" />
         <item
             android:id="@+id/nav_settings"

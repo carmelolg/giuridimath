@@ -1,13 +1,11 @@
 package it.carmelolagamba.giuridimath.ui.dailycalculator
 
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.NumberPicker
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.skydoves.balloon.ArrowPositionRules
 import com.skydoves.balloon.Balloon
@@ -20,7 +18,6 @@ import it.carmelolagamba.giuridimath.service.PreferencesService
 import it.carmelolagamba.giuridimath.service.UtilService
 import it.carmelolagamba.giuridimath.ui.GMTime
 import javax.inject.Inject
-import kotlin.math.abs
 
 
 /**
@@ -80,6 +77,10 @@ class DailyCalculatorFragment : Fragment() {
 
             binding.resultContainer.visibility = View.VISIBLE
             binding.cleanButton.visibility = View.VISIBLE
+            binding.scrollContainer.fullScroll(View.FOCUS_DOWN)
+            binding.scrollContainer.post {
+                binding.scrollContainer.fullScroll(View.FOCUS_DOWN)
+            }
         }
 
         val balloon = Balloon.Builder(requireContext())
