@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.dailycalculator.DailyCalculatorFragment">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+
+        <LinearLayout
+            android:id="@+id/header_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/current_day_hours"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="?attr/GMHighlightColor"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_default" />
+
+            <!--TextView
+                android:id="@+id/current_minumum_break_hours"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="?attr/GMHighlightColor"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_default"
+                android:visibility="gone" /-->
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="fill_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/ingress_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.55"
+                        android:gravity="start|center"
+                        android:text="@string/daily_insert_time_label"
+                        android:textColor="?attr/GMColorPrimary"
+                        android:textSize="@dimen/text_size_medium_low" />
+
+                    <NumberPicker
+                        android:id="@+id/daily_ingress_hours"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="0.2" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.02"
+                        android:gravity="start|center"
+                        android:text=":"
+                        android:textColor="?attr/GMColorPrimary"
+                        android:textSize="@dimen/text_size_default" />
+
+                    <NumberPicker
+                        android:id="@+id/daily_ingress_minutes"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="0.2" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?attr/GMDividerColor" />
+
+                <LinearLayout
+                    android:id="@+id/break_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.55"
+                        android:gravity="start|center"
+                        android:text="@string/daily_break_label"
+                        android:textColor="?attr/GMColorPrimary"
+                        android:textSize="@dimen/text_size_medium_low" />
+
+                    <NumberPicker
+                        android:id="@+id/daily_break_hours"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="0.2" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.02"
+                        android:gravity="start|center"
+                        android:text=":"
+                        android:textColor="?attr/GMColorPrimary"
+                        android:textSize="@dimen/text_size_default" />
+
+                    <NumberPicker
+                        android:id="@+id/daily_break_minutes"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="0.2" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?attr/GMDividerColor" />
+
+                <LinearLayout
+                    android:id="@+id/offs_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.55"
+                        android:gravity="start|center"
+                        android:text="@string/daily_permit_label"
+                        android:textColor="?attr/GMColorPrimary"
+                        android:textSize="@dimen/text_size_medium_low" />
+
+                    <NumberPicker
+                        android:id="@+id/daily_permit_hours"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="0.2" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.02"
+                        android:gravity="start|center"
+                        android:text=":"
+                        android:textColor="?attr/GMColorPrimary"
+                        android:textSize="@dimen/text_size_default" />
+
+                    <NumberPicker
+                        android:id="@+id/daily_permit_minutes"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="0.2" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?attr/GMDividerColor" />
+
+                <LinearLayout
+                    android:id="@+id/utils_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.7"
+                        android:gravity="start|center"
+                        android:text="@string/daily_save_launch_ticket_label"
+                        android:textColor="?attr/GMColorPrimary"
+                        android:textSize="@dimen/text_size_medium_low" />
+
+                    <ImageView
+                        android:id="@+id/info_icon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:src="@drawable/ic_info"
+                        app:tint="?attr/GMColorSecondary" />
+
+                    <CheckBox
+                        android:id="@+id/launch_ticket_checkbox"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?attr/GMDividerColor" />
+
+                <LinearLayout
+                    android:id="@+id/result_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.75"
+                        android:gravity="start|center"
+                        android:text="@string/daily_result_label"
+                        android:textColor="?attr/GMColorPrimary"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/result"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:autofillHints="1234.56"
+                        android:backgroundTint="?attr/GMColorSecondary"
+                        android:gravity="center"
+                        android:textColor="?attr/GMHighlightColor"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/result_permit_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.75"
+                        android:gravity="start|center"
+                        android:text="@string/daily_real_permit_label"
+                        android:textColor="?attr/GMColorPrimary"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/permit_result"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25"
+                        android:autofillHints="1234.56"
+                        android:backgroundTint="?attr/GMColorSecondary"
+                        android:gravity="center"
+                        android:textColor="?attr/GMHighlightColor"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="?attr/GMBackgroundColor"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="?attr/GMPanelBackgroundColor"
+            android:text="@string/daily_calculate_label"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/clean_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="?attr/GMHighlightColor"
+            android:text="@string/daily_clean_label"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>

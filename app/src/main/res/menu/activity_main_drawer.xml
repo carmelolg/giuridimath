@@ -5,6 +5,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_dailycalculator"
+            android:icon="@drawable/ic_office"
+            android:title="@string/menu_dailycalculator_title" />
+        <item
             android:id="@+id/nav_dayoff"
             android:icon="@drawable/ic_calculator"
             android:title="@string/menu_calculator_title" />

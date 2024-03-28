@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,10 +12,15 @@ import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.skydoves.balloon.ArrowPositionRules
+import com.skydoves.balloon.Balloon
+import com.skydoves.balloon.BalloonAnimation
+import com.skydoves.balloon.BalloonSizeSpec
 import dagger.hilt.android.AndroidEntryPoint
 import it.carmelolagamba.giuridimath.R
 import it.carmelolagamba.giuridimath.databinding.FragmentCalculatorBinding
 import it.carmelolagamba.giuridimath.service.PreferencesService
+import it.carmelolagamba.giuridimath.ui.GMTime
 import java.lang.NumberFormatException
 import javax.inject.Inject
 
@@ -60,11 +66,37 @@ class CalculatorFragment : Fragment() {
 
         Log.d("GM", binding.hours.text.toString())
 
-        binding.currentDayHours.text = resources.getText(R.string.home_current_day_work_label)
-            .toString() + ": " + String.format("%02d", hours) + " $hoursLabel " + String.format("%02d", minutes) + " $minutesLabel"
+        binding.currentDayHours.text = resources.getString(R.string.home_current_day_work_label, hours, minutes)
 
         binding.cleanButton.setOnClickListener {
             resetUI()
+        }
+
+        val balloon = Balloon.Builder(requireContext())
+            .setWidthRatio(0.8f)
+            .setHeight(BalloonSizeSpec.WRAP)
+            .setText(requireContext().resources.getText(R.string.disclaimer_info))
+            .setTextColorResource(R.color.white)
+            .setTextSize(16f)
+            .setTextGravity(Gravity.CENTER_VERTICAL)
+            .setIconDrawableResource(R.drawable.ic_info)
+            .setIconColor(resources.getColor(R.color.white, requireContext().theme))
+            .setArrowPositionRules(ArrowPositionRules.ALIGN_ANCHOR)
+            .setArrowSize(12)
+            .setArrowPosition(0.5f)
+            .setPadding(8)
+            .setCornerRadius(0f)
+            .setBackgroundColorResource(R.color.fifth)
+            .setBalloonAnimation(BalloonAnimation.FADE)
+            .setLifecycleOwner(this)
+            .build()
+
+        binding.infoIcon.setOnClickListener {
+            balloon.showAlignBottom(binding.infoIcon)
+        }
+
+        balloon.setOnBalloonClickListener {
+            balloon.dismiss()
         }
 
         return root

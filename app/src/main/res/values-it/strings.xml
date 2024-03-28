@@ -11,6 +11,7 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_calculator_title">Calcola giorni</string>
+    <string name="menu_dailycalculator_title">Calcolo giornata lavorativa</string>
     <string name="menu_settings_title">Impostazioni</string>
 
     <!-- MENU EXTRA -->
@@ -18,7 +19,10 @@
 
     <!-- SETTINGS -->
     <string name="settings_panel_title">Impostazioni</string>
-    <string name="settings_day_hours_desc">Ore e minuti giornalieri</string>
+    <string name="settings_panel_daily_title">Impostazioni pause giornaliere</string>
+    <string name="settings_day_hours_desc">Durata giorno lavorativo</string>
+    <string name="settings_day_break_desc">Orario pausa minimo</string>
+    <string name="settings_day_minimum_desc">Orario minimo per ottenere il ticket per il pranzo</string>
     <string name="settings_save_label">Salva</string>
     <string name="dialog_reset_title">Sei sicuro?</string>
     <string name="dialog_reset_description">Se approverai, tutte le tue preferenze saranno eliminate.</string>
@@ -32,8 +36,10 @@
 
     <!-- HOME -->
     <string name="home_panel_title">Calcolatrice</string>
-    <string name="home_current_day_work_label">Durata del giorno lavorativo</string>
+    <string name="home_current_day_work_label">Durata del giorno lavorativo: %02d ore %02d minuti</string>
+    <string name="home_current_break_time_label">Tempo minimo per il ticket: %02d ore %02d minuti</string>
     <string name="home_insert_number_label">Ore residue</string>
+    <string name="home_insert_number_placeholder">Es. 7.63</string>
     <string name="home_result">Risultato</string>
     <string name="home_result_error">Inserisci un numero corretto.</string>
     <string name="home_result_loading">Ore non inserite.</string>
@@ -41,6 +47,20 @@
     <string name="home_result_hours_label">ore</string>
     <string name="home_result_minutes_label">minuti</string>
     <string name="home_clean_label">Reset</string>
+    <string name="disclaimer_info">Nei cedolini paga, le ore di ferie, permesso o lavoro sono spesso espresse in forma decimale. Ad esempio, per rappresentare una giornata lavorativa di 7 ore e 38 minuti, si utilizza spesso il formato decimale, come 7.63 ore. Inserendo qui le ore in formato decimale, l\'applicazione converterà il numero in ore, minuti e secondi.</string>
+
+    <!-- DAILY CALC -->
+    <string name="daily_panel_title">Giorno lavorativo</string>
+    <string name="daily_insert_time_label">Orario d\'ingresso</string>
+    <string name="daily_save_launch_ticket_label">Buono pasto incluso</string>
+    <string name="daily_break_label">Pausa pranzo</string>
+    <string name="daily_permit_label">Permesso</string>
+    <string name="daily_real_permit_label">Permesso effettivo</string>
+    <string name="daily_result_label">Orario d\'uscita</string>
+    <string name="daily_result">%02d:%02d</string>
+    <string name="daily_calculate_label">Calcola</string>
+    <string name="daily_clean_label">Pulisci</string>
+    <string name="disclaimer_permit_info">L\'orario minimo giornaliero per ottenere il ticket del pranzo è %02d:%02d.\nNote: se hai aggiunto ore e minuti di permesso, il loro valore potrebbe variare in base all\'aumento delle tue ore lavorative giornaliere.</string>
 
 
 </resources>

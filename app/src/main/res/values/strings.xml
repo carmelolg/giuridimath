@@ -11,6 +11,7 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_calculator_title">Day calculator</string>
+    <string name="menu_dailycalculator_title">Daily hours calculator</string>
     <string name="menu_settings_title">Settings</string>
 
     <!-- MENU EXTRA -->
@@ -18,7 +19,10 @@
 
     <!-- SETTINGS -->
     <string name="settings_panel_title">Settings</string>
+    <string name="settings_panel_daily_title">Daily Break Settings</string>
     <string name="settings_day_hours_desc">Daily hours and minutes</string>
+    <string name="settings_day_break_desc">Minimum break time</string>
+    <string name="settings_day_minimum_desc">The minimum time to obtain the lunch ticket</string>
     <string name="dialog_reset_title">Are you sure?</string>
     <string name="dialog_reset_description">If you proceed, all your preferences will be reset.</string>
     <string name="dialog_save_title">Do you want to save?</string>
@@ -34,8 +38,10 @@
 
     <!-- HOME -->
     <string name="home_panel_title">Calculator</string>
-    <string name="home_current_day_work_label">Current day work duration</string>
+    <string name="home_current_day_work_label">Current day work duration: %02d hours %02d minutes</string>
+    <string name="home_current_break_time_label">Minimum time to get the launch ticket: %02d hours %02d minutes</string>
     <string name="home_insert_number_label">Insert hours</string>
+    <string name="home_insert_number_placeholder">E.g. 7.63</string>
     <string name="home_result">Result</string>
     <string name="home_result_error">Insert a correct number</string>
     <string name="home_result_loading">Insert hours please.</string>
@@ -43,4 +49,21 @@
     <string name="home_result_hours_label">hours</string>
     <string name="home_result_minutes_label">minutes</string>
     <string name="home_clean_label">Clean</string>
+    <string name="disclaimer_info">In payslips, often vacation, leave, or worked hours are expressed in decimals. For example, to represent a day\'s work of 7 hours and 38 minutes, it is expressed as 7.63 hours. By entering the hours in decimals here, the application will convert the number into hours, minutes, and seconds.</string>
+
+    <!-- DAILY CALC -->
+    <string name="daily_panel_title">Daily Calculator</string>
+    <string name="daily_insert_time_label">Insert ingress time</string>
+    <string name="daily_save_launch_ticket_label">Save launch ticket</string>
+    <string name="daily_break_label">Break time</string>
+    <string name="daily_permit_label">Work permit</string>
+    <string name="daily_real_permit_label">Real work permit</string>
+    <string name="daily_result_label">Exit time</string>
+    <string name="daily_result">%02d:%02d</string>
+    <string name="daily_calculate_label">Calculate</string>
+    <string name="daily_clean_label">Clean</string>
+    <string name="disclaimer_permit_info">The minimum daily time to obtain the lunch ticket is %02d:%02d.\nNote: if you have added hours and minutes of permission, their value may vary depending on the increase in your daily working hours.</string>
+
+
+
 </resources>

@@ -16,8 +16,8 @@ android {
         applicationId = "it.carmelolagamba.giuridimath"
         minSdk = 29
         targetSdk = 34
-        versionCode = 3
-        versionName = "0.0.1"
+        versionCode = 5
+        versionName = "0.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -107,6 +107,9 @@ dependencies {
 
     // optional - Paging 3 Integration
     implementation("androidx.room:room-paging:$roomVersion")
+
+    // Ballon
+    implementation("com.github.skydoves:balloon:1.6.4")
 
 }
 

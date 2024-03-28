@@ -30,6 +30,42 @@ class PreferencesService @Inject constructor() {
         updateByValue(DAY_MINUTES_CUSTOM_VALUE, time.toString())
     }
 
+    fun findDayBreakHoursCustomValue(): Int {
+        val preferences = findPreferenceByKey(DAY_BREAK_HOURS_CUSTOM_VALUE)
+        return preferences?.value?.toInt() ?: 1
+    }
+
+    fun updateDayBreakHoursCustomValue(time: Int) {
+        updateByValue(DAY_BREAK_HOURS_CUSTOM_VALUE, time.toString())
+    }
+
+    fun findDayBreakMinutesCustomValue(): Int {
+        val preferences = findPreferenceByKey(DAY_BREAK_MINUTES_CUSTOM_VALUE)
+        return preferences?.value?.toInt() ?: 0
+    }
+
+    fun updateDayBreakMinutesCustomValue(time: Int) {
+        updateByValue(DAY_BREAK_MINUTES_CUSTOM_VALUE, time.toString())
+    }
+
+    fun findDayMinimumHoursCustomValue(): Int {
+        val preferences = findPreferenceByKey(DAY_MINIMUM_HOURS_CUSTOM_VALUE)
+        return preferences?.value?.toInt() ?: 4
+    }
+
+    fun updateDayMinimumHoursCustomValue(time: Int) {
+        updateByValue(DAY_MINIMUM_HOURS_CUSTOM_VALUE, time.toString())
+    }
+
+    fun findDayMinimumMinutesCustomValue(): Int {
+        val preferences = findPreferenceByKey(DAY_MINIMUM_MINUTES_CUSTOM_VALUE)
+        return preferences?.value?.toInt() ?: 0
+    }
+
+    fun updateDayMinimumMinutesCustomValue(time: Int) {
+        updateByValue(DAY_MINIMUM_MINUTES_CUSTOM_VALUE, time.toString())
+    }
+
     fun resetAll() {
         DBFactory.getDatabase(GiuridiMathApplication.context).preferencesDao().deleteAll()
     }
@@ -78,6 +114,18 @@ class PreferencesService @Inject constructor() {
 
         @JvmStatic
         val DAY_MINUTES_CUSTOM_VALUE: String = "day_minutes_custom_value"
+
+        @JvmStatic
+        val DAY_BREAK_MINUTES_CUSTOM_VALUE: String = "day_break_minutes_custom_value"
+
+        @JvmStatic
+        val DAY_BREAK_HOURS_CUSTOM_VALUE: String = "day_break_hours_custom_value"
+
+        @JvmStatic
+        val DAY_MINIMUM_MINUTES_CUSTOM_VALUE: String = "day_minimum_minutes_custom_value"
+
+        @JvmStatic
+        val DAY_MINIMUM_HOURS_CUSTOM_VALUE: String = "day_minimum_hours_custom_value"
 
     }
 

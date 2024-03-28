@@ -28,7 +28,7 @@
         <item name="GMFloatingButtonForeground">@color/white</item>
         <item name="GMHistoryStatsPanelBackgroundColor">@color/n_fourth</item>
         <item name="GMHistoryStatsPanelTextColor">@color/white</item>
-        <item name="GMDividerColor">@color/n_first</item>
+        <item name="GMDividerColor">@color/n_second</item>
         <item name="GMHighlightColor">@color/n_fifth</item>
         <item name="GMBackgroundColor">@color/n_black_default</item>
         <item name="GMProgressBarColor">?attr/GMColorTertiary</item>

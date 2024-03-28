@@ -41,20 +41,19 @@
                         android:textColor="?attr/GMPanelTextColor"
                         android:textSize="@dimen/text_size_default" />
 
-
                     <LinearLayout
-                        android:id="@+id/daily_hours_picker"
+                        android:id="@+id/daily_work_container"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:padding="20dp">
+                        android:padding="10dp"
+                        android:weightSum="1">
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_weight="0.58"
+                            android:layout_weight="0.6"
                             android:gravity="start|center"
                             android:text="@string/settings_day_hours_desc"
                             android:textColor="?attr/GMColorPrimary"
@@ -63,13 +62,13 @@
                         <NumberPicker
                             android:id="@+id/settings_time_picker_hours"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.2" />
+                            android:layout_height="135dp"
+                            android:layout_weight="0.175" />
 
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_weight="0.02"
                             android:gravity="start|center"
@@ -80,8 +79,104 @@
                         <NumberPicker
                             android:id="@+id/settings_time_picker_minutes"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.2" />
+                            android:layout_height="135dp"
+                            android:layout_weight="0.175" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?attr/GMDividerColor" />
+
+                    <LinearLayout
+                        android:id="@+id/daily_hours_picker_daily"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:gravity="start|center"
+                            android:text="@string/settings_day_break_desc"
+                            android:textColor="?attr/GMColorPrimary"
+                            android:textSize="@dimen/text_size_default" />
+
+                        <NumberPicker
+                            android:id="@+id/settings_time_picker_break_hours"
+                            android:layout_width="0dp"
+                            android:layout_height="135dp"
+                            android:layout_weight="0.175" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.02"
+                            android:gravity="start|center"
+                            android:text=":"
+                            android:textColor="?attr/GMColorPrimary"
+                            android:textSize="@dimen/text_size_default" />
+
+                        <NumberPicker
+                            android:id="@+id/settings_time_picker_break_minutes"
+                            android:layout_width="0dp"
+                            android:layout_height="135dp"
+                            android:layout_weight="0.175" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?attr/GMDividerColor" />
+
+                    <LinearLayout
+                        android:id="@+id/daily_hours_picker_minimum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.6"
+                            android:gravity="start|center"
+                            android:text="@string/settings_day_minimum_desc"
+                            android:textColor="?attr/GMColorPrimary"
+                            android:textSize="@dimen/text_size_default" />
+
+                        <NumberPicker
+                            android:id="@+id/settings_time_picker_minimum_hours"
+                            android:layout_width="0dp"
+                            android:layout_height="135dp"
+                            android:layout_weight="0.175" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.02"
+                            android:gravity="start|center"
+                            android:text=":"
+                            android:textColor="?attr/GMColorPrimary"
+                            android:textSize="@dimen/text_size_default"  />
+
+                        <NumberPicker
+                            android:id="@+id/settings_time_picker_minimum_minutes"
+                            android:layout_width="0dp"
+                            android:layout_height="135dp"
+                            android:layout_weight="0.175" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -205,9 +300,9 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
         android:background="?attr/GMBackgroundColor"
         android:gravity="center"
-        android:layout_margin="15dp"
         android:orientation="horizontal">
 
         <Button
@@ -215,7 +310,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="?attr/GMHighlightColor"
-            android:text="@string/settings_save_label" />
+            android:text="@string/settings_save_label"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 
