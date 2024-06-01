@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GiuridiMath"
+rootProject.name = "giuridimath"
 include(":app")
  
